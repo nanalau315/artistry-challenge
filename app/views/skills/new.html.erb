@@ -1,0 +1,9 @@
+<h1>New Skills</h1>
+
+<%= form_for @skill do |f| %>
+<%= f.collection_select :artist_id, Artist.all, :id, :name %>
+<br><br>
+<%= f.collection_select :instrument_id, Instrument.all, :id, :name %>
+<br><br>
+<%= f.submit %>
+<% end %>
